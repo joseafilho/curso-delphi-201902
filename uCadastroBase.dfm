@@ -71,6 +71,8 @@ object fmCadastroBase: TfmCadastroBase
         Height = 294
         Align = alClient
         DataSource = dsDados
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgTitleClick, dgTitleHotTrack]
+        ReadOnly = True
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -90,7 +92,7 @@ object fmCadastroBase: TfmCadastroBase
         Align = alRight
         BevelOuter = bvNone
         ParentBackground = False
-        TabOrder = 0
+        TabOrder = 1
         object btSalvar: TButton
           Left = 8
           Top = 8
@@ -109,6 +111,19 @@ object fmCadastroBase: TfmCadastroBase
           TabOrder = 1
           OnClick = btCancelarClick
         end
+      end
+      object pnEdits: TPanel
+        Left = 0
+        Top = 0
+        Width = 388
+        Height = 294
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 0
+        ExplicitLeft = 72
+        ExplicitTop = 56
+        ExplicitWidth = 185
+        ExplicitHeight = 41
       end
     end
   end

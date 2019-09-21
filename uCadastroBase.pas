@@ -25,6 +25,7 @@ type
     btCancelar: TButton;
     qrDados: TFDQuery;
     dsDados: TDataSource;
+    pnEdits: TPanel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure btInserirClick(Sender: TObject);
@@ -32,6 +33,7 @@ type
     procedure btSalvarClick(Sender: TObject);
     procedure btCancelarClick(Sender: TObject);
   private
+    procedure EsconderAbas;
     { Private declarations }
   public
     { Public declarations }
@@ -49,22 +51,27 @@ uses
 
 procedure TfmCadastroBase.btCancelarClick(Sender: TObject);
 begin
+  qrDados.Cancel;
+  pcPrincipal.ActivePage := tsGrid;
+end;
+
+procedure TfmCadastroBase.btSalvarClick(Sender: TObject);
+begin
+  qrDados.Post;
   pcPrincipal.ActivePage := tsGrid;
 end;
 
 procedure TfmCadastroBase.btEditarClick(Sender: TObject);
 begin
   pcPrincipal.ActivePage := tsEdits;
+  qrDados.Edit;
 end;
 
 procedure TfmCadastroBase.btInserirClick(Sender: TObject);
 begin
+  qrDados.Append;
   pcPrincipal.ActivePage := tsEdits;
-end;
 
-procedure TfmCadastroBase.btSalvarClick(Sender: TObject);
-begin
-  pcPrincipal.ActivePage := tsGrid;
 end;
 
 procedure TfmCadastroBase.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -73,10 +80,15 @@ begin
 end;
 
 procedure TfmCadastroBase.FormShow(Sender: TObject);
+begin
+  EsconderAbas;
+  qrDados.Open;
+end;
+
+procedure TfmCadastroBase.EsconderAbas;
 var
   I: Integer;
 begin
-  // Esconder as abas do page control
   for I := 0 to pcPrincipal.PageCount - 1 do
     pcPrincipal.Pages[I].TabVisible := false;
 
