@@ -14,6 +14,8 @@ object fmCadastroBase: TfmCadastroBase
   KeyPreview = True
   OldCreateOrder = False
   Visible = True
+  OnClose = FormClose
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object pcPrincipal: TPageControl
@@ -24,22 +26,17 @@ object fmCadastroBase: TfmCadastroBase
     ActivePage = tsEdits
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 462
-    ExplicitHeight = 313
     object tsGrid: TTabSheet
       Caption = 'tsGrid'
-      ExplicitLeft = 8
-      ExplicitTop = 28
       object pnButtonsGrid: TPanel
         Left = 388
         Top = 0
         Width = 89
         Height = 294
         Align = alRight
-        Color = clYellow
+        BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 387
         object btInserir: TButton
           Left = 8
           Top = 8
@@ -47,6 +44,7 @@ object fmCadastroBase: TfmCadastroBase
           Height = 25
           Caption = 'Inserir'
           TabOrder = 0
+          OnClick = btInserirClick
         end
         object btEditar: TButton
           Left = 8
@@ -55,6 +53,7 @@ object fmCadastroBase: TfmCadastroBase
           Height = 25
           Caption = 'Editar'
           TabOrder = 1
+          OnClick = btEditarClick
         end
         object btExcluit: TButton
           Left = 8
@@ -71,6 +70,7 @@ object fmCadastroBase: TfmCadastroBase
         Width = 388
         Height = 294
         Align = alClient
+        DataSource = dsDados
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
@@ -82,18 +82,15 @@ object fmCadastroBase: TfmCadastroBase
     object tsEdits: TTabSheet
       Caption = 'tsEdits'
       ImageIndex = 1
-      ExplicitWidth = 454
-      ExplicitHeight = 285
       object pnButtonsEdits: TPanel
         Left = 388
         Top = 0
         Width = 89
         Height = 294
         Align = alRight
-        Color = clYellow
+        BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 387
         object btSalvar: TButton
           Left = 8
           Top = 8
@@ -101,6 +98,7 @@ object fmCadastroBase: TfmCadastroBase
           Height = 25
           Caption = 'Salvar'
           TabOrder = 0
+          OnClick = btSalvarClick
         end
         object btCancelar: TButton
           Left = 8
@@ -109,8 +107,19 @@ object fmCadastroBase: TfmCadastroBase
           Height = 25
           Caption = 'Cancelar'
           TabOrder = 1
+          OnClick = btCancelarClick
         end
       end
     end
+  end
+  object qrDados: TFDQuery
+    Connection = dmPrincipal.fdConn
+    Left = 164
+    Top = 80
+  end
+  object dsDados: TDataSource
+    DataSet = qrDados
+    Left = 164
+    Top = 136
   end
 end

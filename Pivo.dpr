@@ -3,9 +3,9 @@ program Pivo;
 uses
   Vcl.Forms,
   uPrincipal in 'uPrincipal.pas' {fmPrincipal},
-  uTest in 'uTest.pas' {fmTest},
   udmPrincipal in 'udmPrincipal.pas' {dmPrincipal: TDataModule},
-  uCadastroBase in 'uCadastroBase.pas' {fmCadastroBase};
+  uCadastroBase in 'uCadastroBase.pas' {fmCadastroBase},
+  uCadastroClientes in 'uCadastroClientes.pas' {fmCadastroClientes};
 
 {$R *.res}
 

@@ -104,10 +104,6 @@
             <Form>fmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="uTest.pas">
-            <Form>fmTest</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="udmPrincipal.pas">
             <Form>dmPrincipal</Form>
             <FormType>dfm</FormType>
@@ -115,6 +111,10 @@
         </DCCReference>
         <DCCReference Include="uCadastroBase.pas">
             <Form>fmCadastroBase</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uCadastroClientes.pas">
+            <Form>fmCadastroClientes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

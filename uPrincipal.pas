@@ -36,14 +36,14 @@ implementation
 {$R *.dfm}
 
 uses
-  uTest;
+  uCadastroClientes;
 
 procedure TfmPrincipal.Clientes1Click(Sender: TObject);
 begin
-  if fmTest = nil then
-    fmTest := TfmTest.Create(Self);
+  if fmCadastroClientes = nil then
+    fmCadastroClientes := TfmCadastroClientes.Create(Self);
 
-  fmTest.Show;
+  fmCadastroClientes.Show;
 end;
 
 end.

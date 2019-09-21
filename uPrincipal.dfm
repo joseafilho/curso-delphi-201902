@@ -24,9 +24,6 @@ object fmPrincipal: TfmPrincipal
     Panels = <>
     SimplePanel = True
     SimpleText = 'Version: 1.0.0'
-    ExplicitLeft = 232
-    ExplicitTop = 160
-    ExplicitWidth = 0
   end
   object mmPrincipal: TMainMenu
     Left = 168
