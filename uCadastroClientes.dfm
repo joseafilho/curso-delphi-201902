@@ -5,10 +5,6 @@ inherited fmCadastroClientes: TfmCadastroClientes
   inherited pcPrincipal: TPageControl
     inherited tsEdits: TTabSheet
       inherited pnEdits: TPanel
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 388
-        ExplicitHeight = 294
         object Label5: TLabel
           Left = 16
           Top = 187
@@ -63,6 +59,7 @@ inherited fmCadastroClientes: TfmCadastroClientes
           DataField = 'TELEFONE'
           DataSource = dsDados
           TabOrder = 5
+          OnKeyPress = edTelefoneKeyPress
         end
         object edEmail: TDBEdit
           Left = 16
@@ -81,6 +78,7 @@ inherited fmCadastroClientes: TfmCadastroClientes
           DataField = 'CPF'
           DataSource = dsDados
           TabOrder = 4
+          OnKeyPress = edCPFKeyPress
         end
         object edEndereco: TDBEdit
           Left = 16
@@ -149,6 +147,7 @@ inherited fmCadastroClientes: TfmCadastroClientes
     object qrDadosCPF: TStringField
       FieldName = 'CPF'
       Origin = 'CPF'
+      EditMask = '999.999.999-99;0; '
       FixedChar = True
       Size = 11
     end
@@ -156,6 +155,7 @@ inherited fmCadastroClientes: TfmCadastroClientes
       DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
       Origin = 'TELEFONE'
+      EditMask = '(99) 9999-9999;0; '
     end
   end
 end

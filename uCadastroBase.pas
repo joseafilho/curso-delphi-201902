@@ -32,11 +32,12 @@ type
     procedure btEditarClick(Sender: TObject);
     procedure btSalvarClick(Sender: TObject);
     procedure btCancelarClick(Sender: TObject);
+    procedure btExcluitClick(Sender: TObject);
   private
     procedure EsconderAbas;
-    { Private declarations }
+  protected
+    function ValidarObrigatorios: boolean; virtual;
   public
-    { Public declarations }
   end;
 
 var
@@ -47,7 +48,7 @@ implementation
 {$R *.dfm}
 
 uses
-  udmPrincipal;
+  udmPrincipal, uSystemUtils;
 
 procedure TfmCadastroBase.btCancelarClick(Sender: TObject);
 begin
@@ -57,8 +58,11 @@ end;
 
 procedure TfmCadastroBase.btSalvarClick(Sender: TObject);
 begin
-  qrDados.Post;
-  pcPrincipal.ActivePage := tsGrid;
+  if ValidarObrigatorios then
+  begin
+    qrDados.Post;
+    pcPrincipal.ActivePage := tsGrid;
+  end;
 end;
 
 procedure TfmCadastroBase.btEditarClick(Sender: TObject);
@@ -67,11 +71,16 @@ begin
   qrDados.Edit;
 end;
 
+procedure TfmCadastroBase.btExcluitClick(Sender: TObject);
+begin
+  if MsgConfirm('Confirma a exclusão do registro?') then
+    qrDados.Delete;
+end;
+
 procedure TfmCadastroBase.btInserirClick(Sender: TObject);
 begin
   qrDados.Append;
   pcPrincipal.ActivePage := tsEdits;
-
 end;
 
 procedure TfmCadastroBase.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -83,6 +92,11 @@ procedure TfmCadastroBase.FormShow(Sender: TObject);
 begin
   EsconderAbas;
   qrDados.Open;
+end;
+
+function TfmCadastroBase.ValidarObrigatorios: boolean;
+begin
+  Result := true;
 end;
 
 procedure TfmCadastroBase.EsconderAbas;

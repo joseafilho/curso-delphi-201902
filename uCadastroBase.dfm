@@ -23,7 +23,7 @@ object fmCadastroBase: TfmCadastroBase
     Top = 0
     Width = 485
     Height = 322
-    ActivePage = tsEdits
+    ActivePage = tsGrid
     Align = alClient
     TabOrder = 0
     object tsGrid: TTabSheet
@@ -62,6 +62,7 @@ object fmCadastroBase: TfmCadastroBase
           Height = 25
           Caption = 'Excluir'
           TabOrder = 2
+          OnClick = btExcluitClick
         end
       end
       object grDados: TDBGrid
@@ -120,10 +121,6 @@ object fmCadastroBase: TfmCadastroBase
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitLeft = 72
-        ExplicitTop = 56
-        ExplicitWidth = 185
-        ExplicitHeight = 41
       end
     end
   end

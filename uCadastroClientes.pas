@@ -31,8 +31,12 @@ type
     Label6: TLabel;
     edTelefone: TDBEdit;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure edCPFKeyPress(Sender: TObject; var Key: Char);
+    procedure edTelefoneKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
+  protected
+    function ValidarObrigatorios: boolean; override;
   public
     { Public declarations }
   end;
@@ -42,13 +46,66 @@ var
 
 implementation
 
+uses
+  uSystemUtils;
+
 {$R *.dfm}
+
+procedure TfmCadastroClientes.edCPFKeyPress(Sender: TObject; var Key: Char);
+begin
+  inherited;
+
+  if not(IsNumber(Key)) then
+    Key := #0;
+end;
+
+procedure TfmCadastroClientes.edTelefoneKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+  inherited;
+
+  if not(IsNumber(Key)) then
+    Key := #0;
+end;
 
 procedure TfmCadastroClientes.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
   fmCadastroClientes := nil;
+end;
+
+function TfmCadastroClientes.ValidarObrigatorios: boolean;
+begin
+  if Trim(edId.Text) = '' then
+  begin
+    ShowMessage('Informe o id.');
+    edId.SetFocus;
+    Exit(false);
+  end;
+
+  if Trim(edNome.Text) = '' then
+  begin
+    ShowMessage('Informe o nome.');
+    edNome.SetFocus;
+    Exit(false);
+  end;
+
+  if Trim(edEndereco.Text) = '' then
+  begin
+    ShowMessage('Informe o endereco.');
+    edEndereco.SetFocus;
+    Exit(false);
+  end;
+
+  if Trim(edEmail.Text) = '' then
+  begin
+    ShowMessage('Informe o email.');
+    edEmail.SetFocus;
+    Exit(false);
+  end;
+
+  Result := inherited ValidarObrigatorios;
 end;
 
 end.
