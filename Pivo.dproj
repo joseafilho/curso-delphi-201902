@@ -122,6 +122,11 @@
             <Form>fmCadastroCategorias</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uCadastroFornecedores.pas">
+            <Form>fmCadastroFornecedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -151,6 +156,12 @@
                 <DeployFile LocalName="Win32\Debug\Pivo.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Pivo.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="GeneratorFirebird.txt" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

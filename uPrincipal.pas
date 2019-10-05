@@ -23,6 +23,7 @@ type
     sbPrincipal: TStatusBar;
     procedure Clientes1Click(Sender: TObject);
     procedure Categorias1Click(Sender: TObject);
+    procedure Fornecedores1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,7 +38,7 @@ implementation
 {$R *.dfm}
 
 uses
-  uCadastroClientes, uCadastroCategorias;
+  uCadastroClientes, uCadastroCategorias, uCadastroFornecedores;
 
 procedure TfmPrincipal.Categorias1Click(Sender: TObject);
 begin
@@ -53,6 +54,14 @@ begin
     fmCadastroClientes := TfmCadastroClientes.Create(Self);
 
   fmCadastroClientes.Show;
+end;
+
+procedure TfmPrincipal.Fornecedores1Click(Sender: TObject);
+begin
+  if fmCadastroFornecedores = nil then
+    fmCadastroFornecedores := TfmCadastroFornecedores.Create(Self);
+
+  fmCadastroFornecedores.Show;
 end;
 
 end.

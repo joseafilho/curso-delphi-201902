@@ -7,7 +7,8 @@ uses
   uCadastroBase in 'uCadastroBase.pas' {fmCadastroBase},
   uCadastroClientes in 'uCadastroClientes.pas' {fmCadastroClientes},
   uSystemUtils in 'uSystemUtils.pas',
-  uCadastroCategorias in 'uCadastroCategorias.pas' {fmCadastroCategorias};
+  uCadastroCategorias in 'uCadastroCategorias.pas' {fmCadastroCategorias},
+  uCadastroFornecedores in 'uCadastroFornecedores.pas' {fmCadastroFornecedores};
 
 {$R *.res}
 
