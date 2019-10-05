@@ -3,6 +3,7 @@ inherited fmCadastroClientes: TfmCadastroClientes
   PixelsPerInch = 96
   TextHeight = 13
   inherited pcPrincipal: TPageControl
+    ActivePage = tsEdits
     inherited tsEdits: TTabSheet
       inherited pnEdits: TPanel
         object Label5: TLabel

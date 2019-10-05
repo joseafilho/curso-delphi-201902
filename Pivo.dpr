@@ -6,7 +6,8 @@ uses
   udmPrincipal in 'udmPrincipal.pas' {dmPrincipal: TDataModule},
   uCadastroBase in 'uCadastroBase.pas' {fmCadastroBase},
   uCadastroClientes in 'uCadastroClientes.pas' {fmCadastroClientes},
-  uSystemUtils in 'uSystemUtils.pas';
+  uSystemUtils in 'uSystemUtils.pas',
+  uCadastroCategorias in 'uCadastroCategorias.pas' {fmCadastroCategorias};
 
 {$R *.res}
 

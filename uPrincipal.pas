@@ -22,6 +22,7 @@ type
     Estoque1: TMenuItem;
     sbPrincipal: TStatusBar;
     procedure Clientes1Click(Sender: TObject);
+    procedure Categorias1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,7 +37,15 @@ implementation
 {$R *.dfm}
 
 uses
-  uCadastroClientes;
+  uCadastroClientes, uCadastroCategorias;
+
+procedure TfmPrincipal.Categorias1Click(Sender: TObject);
+begin
+  if fmCadastroCategorias = nil then
+    fmCadastroCategorias := TfmCadastroCategorias.Create(Self);
+
+  fmCadastroCategorias.Show;
+end;
 
 procedure TfmPrincipal.Clientes1Click(Sender: TObject);
 begin

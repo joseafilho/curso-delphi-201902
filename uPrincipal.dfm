@@ -39,6 +39,7 @@ object fmPrincipal: TfmPrincipal
       end
       object Categorias1: TMenuItem
         Caption = 'Categorias'
+        OnClick = Categorias1Click
       end
       object Produtos1: TMenuItem
         Caption = 'Produtos'
