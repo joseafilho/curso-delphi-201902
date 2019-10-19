@@ -60,8 +60,18 @@ procedure TfmCadastroBase.btSalvarClick(Sender: TObject);
 begin
   if ValidarObrigatorios then
   begin
-    qrDados.Post;
-    pcPrincipal.ActivePage := tsGrid;
+    try
+      qrDados.Post;
+      pcPrincipal.ActivePage := tsGrid;
+    except
+      on E: Exception do
+      begin
+        if E.Message.Contains('PRIMARY') then
+          MsgWarning('Não é permitido registro duplicado.' + E.Message)
+        else
+          MsgWarning('Evento inesperado: ' + E.Message);
+      end;
+    end;
   end;
 end;
 

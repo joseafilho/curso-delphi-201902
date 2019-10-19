@@ -130,6 +130,10 @@
             <Form>fmCadastroProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uCadastroProdutosFornecedores.pas">
+            <Form>fmCadastroProdutosFornecedores</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

@@ -9,7 +9,8 @@ uses
   uSystemUtils in 'uSystemUtils.pas',
   uCadastroCategorias in 'uCadastroCategorias.pas' {fmCadastroCategorias},
   uCadastroFornecedores in 'uCadastroFornecedores.pas' {fmCadastroFornecedores},
-  uCadastroProdutos in 'uCadastroProdutos.pas' {fmCadastroProdutos};
+  uCadastroProdutos in 'uCadastroProdutos.pas' {fmCadastroProdutos},
+  uCadastroProdutosFornecedores in 'uCadastroProdutosFornecedores.pas' {fmCadastroProdutosFornecedores};
 
 {$R *.res}
 

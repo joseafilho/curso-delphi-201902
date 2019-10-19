@@ -14,6 +14,15 @@ inherited fmCadastroProdutos: TfmCadastroProdutos
       inherited pnButtonsGrid: TPanel
         Left = 551
         Height = 379
+        object btFornecedores: TButton
+          Left = 8
+          Top = 117
+          Width = 75
+          Height = 25
+          Caption = 'Fornecedores'
+          TabOrder = 3
+          OnClick = btFornecedoresClick
+        end
       end
       inherited grDados: TDBGrid
         Width = 551
@@ -21,8 +30,6 @@ inherited fmCadastroProdutos: TfmCadastroProdutos
       end
     end
     inherited tsEdits: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 640
       ExplicitHeight = 379
       inherited pnButtonsEdits: TPanel
@@ -94,6 +101,7 @@ inherited fmCadastroProdutos: TfmCadastroProdutos
     SQL.Strings = (
       'SELECT * FROM PRODUTOS')
     object qrDadosID: TFDAutoIncField
+      DefaultExpression = '0'
       DisplayLabel = 'Id'
       FieldName = 'ID'
       ReadOnly = True
@@ -110,6 +118,7 @@ inherited fmCadastroProdutos: TfmCadastroProdutos
       FieldName = 'VALOR'
       Origin = 'VALOR'
       Required = True
+      DisplayFormat = ',0.00'
       Precision = 18
       Size = 2
     end

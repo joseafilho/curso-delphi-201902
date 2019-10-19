@@ -4,6 +4,7 @@ interface
 
 function IsNumber(Key: Char): boolean;
 function MsgConfirm(aMessage: string): boolean;
+procedure MsgWarning(aMessage: string);
 
 implementation
 
@@ -18,6 +19,11 @@ end;
 function MsgConfirm(aMessage: string): boolean;
 begin
   Result := Application.MessageBox(PWideChar(aMessage), 'Pivo', MB_YESNO + MB_ICONQUESTION + MB_DEFBUTTON2) = ID_YES;
+end;
+
+procedure MsgWarning(aMessage: string);
+begin
+  Application.MessageBox(PWideChar(aMessage), 'Pivo', MB_OK + MB_ICONWARNING);
 end;
 
 end.
