@@ -24,6 +24,7 @@ type
     procedure Clientes1Click(Sender: TObject);
     procedure Categorias1Click(Sender: TObject);
     procedure Fornecedores1Click(Sender: TObject);
+    procedure Produtos1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +39,8 @@ implementation
 {$R *.dfm}
 
 uses
-  uCadastroClientes, uCadastroCategorias, uCadastroFornecedores;
+  uCadastroClientes, uCadastroCategorias, uCadastroFornecedores,
+  uCadastroProdutos;
 
 procedure TfmPrincipal.Categorias1Click(Sender: TObject);
 begin
@@ -62,6 +64,14 @@ begin
     fmCadastroFornecedores := TfmCadastroFornecedores.Create(Self);
 
   fmCadastroFornecedores.Show;
+end;
+
+procedure TfmPrincipal.Produtos1Click(Sender: TObject);
+begin
+  if fmCadastroProdutos = nil then
+    fmCadastroProdutos := TfmCadastroProdutos.Create(Self);
+
+  fmCadastroProdutos.Show;
 end;
 
 end.
