@@ -134,6 +134,10 @@
             <Form>fmCadastroProdutosFornecedores</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uMovimentoEstoqueEntrada.pas">
+            <Form>fmMovimentoEstoqueEntrada</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

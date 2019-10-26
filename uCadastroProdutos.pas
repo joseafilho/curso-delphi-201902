@@ -23,8 +23,17 @@ type
     Label3: TLabel;
     Valor: TDBEdit;
     btFornecedores: TButton;
+    qrCategorias: TFDQuery;
+    dsCategorias: TDataSource;
+    qrCategoriasID: TIntegerField;
+    qrCategoriasDESCRICAO: TStringField;
+    lkCategoria: TDBLookupComboBox;
+    lbCategoria: TLabel;
+    qrDadosCATEGORIA_ID: TIntegerField;
+    qrDadosCATEGORIA: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btFornecedoresClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   protected
@@ -40,7 +49,7 @@ implementation
 
 {$R *.dfm}
 
-uses uCadastroProdutosFornecedores;
+uses uCadastroProdutosFornecedores, udmPrincipal;
 
 { TfmCadastroProdutos }
 
@@ -63,6 +72,12 @@ procedure TfmCadastroProdutos.FormClose(Sender: TObject;
 begin
   inherited;
   fmCadastroProdutos := nil;
+end;
+
+procedure TfmCadastroProdutos.FormShow(Sender: TObject);
+begin
+  inherited;
+  qrCategorias.Open;
 end;
 
 function TfmCadastroProdutos.ValidarObrigatorios: boolean;

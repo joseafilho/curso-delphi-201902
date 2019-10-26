@@ -11,11 +11,18 @@ inherited fmCadastroProdutosFornecedores: TfmCadastroProdutosFornecedores
   inherited pcPrincipal: TPageControl
     Width = 617
     Height = 334
-    ActivePage = tsEdits
+    ExplicitWidth = 617
+    ExplicitHeight = 334
     inherited tsGrid: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 609
+      ExplicitHeight = 306
       inherited pnButtonsGrid: TPanel
         Left = 520
         Height = 306
+        ExplicitLeft = 520
+        ExplicitHeight = 306
       end
       inherited grDados: TDBGrid
         Width = 520
@@ -23,6 +30,8 @@ inherited fmCadastroProdutosFornecedores: TfmCadastroProdutosFornecedores
       end
     end
     inherited tsEdits: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 609
       ExplicitHeight = 306
       inherited pnButtonsEdits: TPanel
@@ -34,8 +43,6 @@ inherited fmCadastroProdutosFornecedores: TfmCadastroProdutosFornecedores
       inherited pnEdits: TPanel
         Width = 520
         Height = 306
-        ExplicitLeft = 3
-        ExplicitTop = 3
         ExplicitWidth = 520
         ExplicitHeight = 306
         object Label1: TLabel
