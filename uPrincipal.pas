@@ -21,10 +21,14 @@ type
     Relatrios1: TMenuItem;
     Estoque1: TMenuItem;
     sbPrincipal: TStatusBar;
+    Estoque2: TMenuItem;
+    Entradas1: TMenuItem;
+    Sadas1: TMenuItem;
     procedure Clientes1Click(Sender: TObject);
     procedure Categorias1Click(Sender: TObject);
     procedure Fornecedores1Click(Sender: TObject);
     procedure Produtos1Click(Sender: TObject);
+    procedure Entradas1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +44,7 @@ implementation
 
 uses
   uCadastroClientes, uCadastroCategorias, uCadastroFornecedores,
-  uCadastroProdutos;
+  uCadastroProdutos, uMovimentoEstoqueEntrada;
 
 procedure TfmPrincipal.Categorias1Click(Sender: TObject);
 begin
@@ -56,6 +60,14 @@ begin
     fmCadastroClientes := TfmCadastroClientes.Create(Self);
 
   fmCadastroClientes.Show;
+end;
+
+procedure TfmPrincipal.Entradas1Click(Sender: TObject);
+begin
+  if fmMovimentoEstoqueEntrada = nil then
+    fmMovimentoEstoqueEntrada := TfmMovimentoEstoqueEntrada.Create(Self);
+
+  fmMovimentoEstoqueEntrada.Show;
 end;
 
 procedure TfmPrincipal.Fornecedores1Click(Sender: TObject);

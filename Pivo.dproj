@@ -138,6 +138,15 @@
             <Form>fmMovimentoEstoqueEntrada</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="ufrConsultaProdutos.pas">
+            <Form>frConsultaProduto</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uConsultaProdutos.pas">
+            <Form>fmConsultaProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

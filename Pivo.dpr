@@ -11,7 +11,9 @@ uses
   uCadastroFornecedores in 'uCadastroFornecedores.pas' {fmCadastroFornecedores},
   uCadastroProdutos in 'uCadastroProdutos.pas' {fmCadastroProdutos},
   uCadastroProdutosFornecedores in 'uCadastroProdutosFornecedores.pas' {fmCadastroProdutosFornecedores},
-  uMovimentoEstoqueEntrada in 'uMovimentoEstoqueEntrada.pas' {fmMovimentoEstoqueEntrada};
+  uMovimentoEstoqueEntrada in 'uMovimentoEstoqueEntrada.pas' {fmMovimentoEstoqueEntrada},
+  ufrConsultaProdutos in 'ufrConsultaProdutos.pas' {frConsultaProduto: TFrame},
+  uConsultaProdutos in 'uConsultaProdutos.pas' {fmConsultaProdutos};
 
 {$R *.res}
 
