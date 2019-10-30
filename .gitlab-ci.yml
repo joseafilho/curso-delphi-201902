@@ -1,7 +1,5 @@
 pages:
- stage: deploy
- tags:
- — test-tag
- script:
- # run PowerShell Command
- — powershell -Command “Get-Date”
+  stage: deploy
+  script:
+    # run PowerShell Command
+    — powershell -Command “Get-Date”
