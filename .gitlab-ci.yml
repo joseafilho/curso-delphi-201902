@@ -1,5 +1,3 @@
 pages:
-  stage: deploy
   script:
-    # run PowerShell Command
-    — powershell -Command “Get-Date”
+    — echo "Deu certo"
