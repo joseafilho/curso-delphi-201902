@@ -55,6 +55,7 @@ object fmConsultaProdutos: TfmConsultaProdutos
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnDblClick = grDadosDblClick
+    OnKeyDown = grDadosKeyDown
   end
   object qrConsulta: TFDQuery
     Connection = dmPrincipal.fdConn

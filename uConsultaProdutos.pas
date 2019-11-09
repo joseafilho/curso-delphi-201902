@@ -22,6 +22,8 @@ type
     procedure edConsultaKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure grDadosDblClick(Sender: TObject);
+    procedure grDadosKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     procedure Consultar;
     { Private declarations }
@@ -49,6 +51,13 @@ end;
 procedure TfmConsultaProdutos.grDadosDblClick(Sender: TObject);
 begin
   ModalResult := mrOk;
+end;
+
+procedure TfmConsultaProdutos.grDadosKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    ModalResult := mrOk;
 end;
 
 procedure TfmConsultaProdutos.edConsultaKeyDown(Sender: TObject; var Key: Word;
