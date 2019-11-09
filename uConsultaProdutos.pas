@@ -21,7 +21,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure edConsultaKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure grDadosDblClick(Sender: TObject);
   private
     procedure Consultar;
     { Private declarations }
@@ -41,15 +41,14 @@ uses udmPrincipal;
 const
   SQL_BASE = 'SELECT ID, NOME FROM PRODUTOS ';
 
-procedure TfmConsultaProdutos.FormKeyUp(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TfmConsultaProdutos.FormShow(Sender: TObject);
 begin
   Consultar;
 end;
 
-procedure TfmConsultaProdutos.FormShow(Sender: TObject);
+procedure TfmConsultaProdutos.grDadosDblClick(Sender: TObject);
 begin
-  Consultar;
+  ModalResult := mrOk;
 end;
 
 procedure TfmConsultaProdutos.edConsultaKeyDown(Sender: TObject; var Key: Word;

@@ -12,7 +12,6 @@ object fmConsultaProdutos: TfmConsultaProdutos
   Font.Style = []
   KeyPreview = True
   OldCreateOrder = False
-  OnKeyUp = FormKeyUp
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -24,7 +23,6 @@ object fmConsultaProdutos: TfmConsultaProdutos
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -6
     object Label1: TLabel
       Left = 8
       Top = 4
@@ -48,12 +46,15 @@ object fmConsultaProdutos: TfmConsultaProdutos
     Height = 277
     Align = alClient
     DataSource = dsConsulta
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgTitleClick, dgTitleHotTrack]
+    ReadOnly = True
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnDblClick = grDadosDblClick
   end
   object qrConsulta: TFDQuery
     Connection = dmPrincipal.fdConn

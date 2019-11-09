@@ -29,7 +29,11 @@ procedure TfrConsultaProduto.btConsultarClick(Sender: TObject);
 begin
   fmConsultaProdutos := TfmConsultaProdutos.Create(Self);
   try
-    fmConsultaProdutos.ShowModal;
+    if fmConsultaProdutos.ShowModal = mrOk then
+    begin
+      edId.Text := fmConsultaProdutos.qrConsulta.FieldByName('ID').AsString;
+      edDescricao.Text := fmConsultaProdutos.qrConsulta.FieldByName('NOME').AsString;
+    end;
   finally
     fmConsultaProdutos.Free;
   end;
