@@ -147,6 +147,10 @@
             <Form>fmConsultaProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uRelatorioProduto.pas">
+            <Form>fmRelatorioProduto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

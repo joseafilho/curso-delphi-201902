@@ -29,6 +29,7 @@ type
     procedure Fornecedores1Click(Sender: TObject);
     procedure Produtos1Click(Sender: TObject);
     procedure Entradas1Click(Sender: TObject);
+    procedure Sadas1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,7 +45,7 @@ implementation
 
 uses
   uCadastroClientes, uCadastroCategorias, uCadastroFornecedores,
-  uCadastroProdutos, uMovimentoEstoqueEntrada;
+  uCadastroProdutos, uMovimentoEstoqueEntrada, uRelatorioProduto;
 
 procedure TfmPrincipal.Categorias1Click(Sender: TObject);
 begin
@@ -84,6 +85,12 @@ begin
     fmCadastroProdutos := TfmCadastroProdutos.Create(Self);
 
   fmCadastroProdutos.Show;
+end;
+
+procedure TfmPrincipal.Sadas1Click(Sender: TObject);
+begin
+  fmRelatorioProduto := TfmRelatorioProduto.Create(Self);
+  fmRelatorioProduto.rpProdutos.Preview;
 end;
 
 end.

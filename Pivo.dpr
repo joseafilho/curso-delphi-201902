@@ -13,7 +13,8 @@ uses
   uCadastroProdutosFornecedores in 'uCadastroProdutosFornecedores.pas' {fmCadastroProdutosFornecedores},
   uMovimentoEstoqueEntrada in 'uMovimentoEstoqueEntrada.pas' {fmMovimentoEstoqueEntrada},
   ufrConsultaProdutos in 'ufrConsultaProdutos.pas' {frConsultaProduto: TFrame},
-  uConsultaProdutos in 'uConsultaProdutos.pas' {fmConsultaProdutos};
+  uConsultaProdutos in 'uConsultaProdutos.pas' {fmConsultaProdutos},
+  uRelatorioProduto in 'uRelatorioProduto.pas' {fmRelatorioProduto};
 
 {$R *.res}
 

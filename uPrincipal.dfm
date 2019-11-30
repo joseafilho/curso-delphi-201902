@@ -67,6 +67,7 @@ object fmPrincipal: TfmPrincipal
         end
         object Sadas1: TMenuItem
           Caption = 'Sa'#237'das'
+          OnClick = Sadas1Click
         end
       end
     end
