@@ -14,7 +14,8 @@ uses
   uMovimentoEstoqueEntrada in 'uMovimentoEstoqueEntrada.pas' {fmMovimentoEstoqueEntrada},
   ufrConsultaProdutos in 'ufrConsultaProdutos.pas' {frConsultaProduto: TFrame},
   uConsultaProdutos in 'uConsultaProdutos.pas' {fmConsultaProdutos},
-  uRelatorioProduto in 'uRelatorioProduto.pas' {fmRelatorioProduto};
+  uRelatorioProduto in 'uRelatorioProduto.pas' {fmRelatorioProduto},
+  uRelatorioMovimentoEstoque in 'uRelatorioMovimentoEstoque.pas' {fmRelatorioMovimentoEstoque};
 
 {$R *.res}
 

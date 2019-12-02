@@ -67,7 +67,6 @@ object fmPrincipal: TfmPrincipal
         end
         object Sadas1: TMenuItem
           Caption = 'Sa'#237'das'
-          OnClick = Sadas1Click
         end
       end
     end
@@ -75,6 +74,11 @@ object fmPrincipal: TfmPrincipal
       Caption = 'Relat'#243'rios'
       object Estoque1: TMenuItem
         Caption = 'Estoque'
+        OnClick = Estoque1Click
+      end
+      object ListagemProdutos1: TMenuItem
+        Caption = 'Listagem de Produtos'
+        OnClick = ListagemProdutos1Click
       end
     end
   end

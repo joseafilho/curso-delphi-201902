@@ -9,6 +9,7 @@ inherited fmCadastroProdutos: TfmCadastroProdutos
   inherited pcPrincipal: TPageControl
     Width = 648
     Height = 407
+    ActivePage = tsEdits
     ExplicitWidth = 648
     ExplicitHeight = 407
     inherited tsGrid: TTabSheet

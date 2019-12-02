@@ -123,14 +123,8 @@ object fmRelatorioProduto: TfmRelatorioProduto
       Width = 718
       Height = 29
       BandType = btSummary
-      object rllTotal: TRLLabel
-        Left = 603
-        Top = 6
-        Width = 42
-        Height = 16
-      end
       object RLDBResult1: TRLDBResult
-        Left = 336
+        Left = 603
         Top = 8
         Width = 87
         Height = 16

@@ -151,6 +151,10 @@
             <Form>fmRelatorioProduto</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uRelatorioMovimentoEstoque.pas">
+            <Form>fmRelatorioMovimentoEstoque</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

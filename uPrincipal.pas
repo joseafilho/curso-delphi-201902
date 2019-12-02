@@ -24,12 +24,14 @@ type
     Estoque2: TMenuItem;
     Entradas1: TMenuItem;
     Sadas1: TMenuItem;
+    ListagemProdutos1: TMenuItem;
     procedure Clientes1Click(Sender: TObject);
     procedure Categorias1Click(Sender: TObject);
     procedure Fornecedores1Click(Sender: TObject);
     procedure Produtos1Click(Sender: TObject);
     procedure Entradas1Click(Sender: TObject);
-    procedure Sadas1Click(Sender: TObject);
+    procedure ListagemProdutos1Click(Sender: TObject);
+    procedure Estoque1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +47,8 @@ implementation
 
 uses
   uCadastroClientes, uCadastroCategorias, uCadastroFornecedores,
-  uCadastroProdutos, uMovimentoEstoqueEntrada, uRelatorioProduto;
+  uCadastroProdutos, uMovimentoEstoqueEntrada, uRelatorioProduto,
+  uRelatorioMovimentoEstoque;
 
 procedure TfmPrincipal.Categorias1Click(Sender: TObject);
 begin
@@ -71,6 +74,12 @@ begin
   fmMovimentoEstoqueEntrada.Show;
 end;
 
+procedure TfmPrincipal.Estoque1Click(Sender: TObject);
+begin
+  fmRelatorioMovimentoEstoque := TfmRelatorioMovimentoEstoque.Create(Self);
+  fmRelatorioMovimentoEstoque.rpMovimentos.Preview;
+end;
+
 procedure TfmPrincipal.Fornecedores1Click(Sender: TObject);
 begin
   if fmCadastroFornecedores = nil then
@@ -79,18 +88,18 @@ begin
   fmCadastroFornecedores.Show;
 end;
 
+procedure TfmPrincipal.ListagemProdutos1Click(Sender: TObject);
+begin
+  fmRelatorioProduto := TfmRelatorioProduto.Create(Self);
+  fmRelatorioProduto.rpProdutos.Preview;
+end;
+
 procedure TfmPrincipal.Produtos1Click(Sender: TObject);
 begin
   if fmCadastroProdutos = nil then
     fmCadastroProdutos := TfmCadastroProdutos.Create(Self);
 
   fmCadastroProdutos.Show;
-end;
-
-procedure TfmPrincipal.Sadas1Click(Sender: TObject);
-begin
-  fmRelatorioProduto := TfmRelatorioProduto.Create(Self);
-  fmRelatorioProduto.rpProdutos.Preview;
 end;
 
 end.

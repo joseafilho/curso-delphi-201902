@@ -28,7 +28,6 @@ type
     RLDBText2: TRLDBText;
     RLDBText3: TRLDBText;
     RLBand4: TRLBand;
-    rllTotal: TRLLabel;
     qrProdutosVALOR: TFMTBCDField;
     RLDBResult1: TRLDBResult;
     procedure rpProdutosBeforePrint(Sender: TObject; var PrintIt: Boolean);
