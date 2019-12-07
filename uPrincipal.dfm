@@ -30,6 +30,10 @@ object fmPrincipal: TfmPrincipal
     Top = 88
     object Cadastros1: TMenuItem
       Caption = 'Cadastros'
+      object Usurios1: TMenuItem
+        Caption = 'Usu'#225'rios'
+        OnClick = Usurios1Click
+      end
       object Clientes1: TMenuItem
         Caption = 'Clientes'
         OnClick = Clientes1Click

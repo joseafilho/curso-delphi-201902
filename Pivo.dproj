@@ -155,6 +155,10 @@
             <Form>fmRelatorioMovimentoEstoque</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="uCadastroUsuarios.pas">
+            <Form>fmCadastroUsuarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

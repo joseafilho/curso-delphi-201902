@@ -28,6 +28,10 @@ object fmCadastroBase: TfmCadastroBase
     TabOrder = 0
     object tsGrid: TTabSheet
       Caption = 'tsGrid'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pnButtonsGrid: TPanel
         Left = 388
         Top = 0
@@ -85,6 +89,10 @@ object fmCadastroBase: TfmCadastroBase
     object tsEdits: TTabSheet
       Caption = 'tsEdits'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pnButtonsEdits: TPanel
         Left = 388
         Top = 0

@@ -36,6 +36,8 @@ type
   private
     procedure EsconderAbas;
   protected
+    procedure BeforeEdit; virtual; abstract;
+    procedure BeforePost; virtual; abstract;
     function ValidarObrigatorios: boolean; virtual;
   public
   end;
@@ -50,6 +52,7 @@ implementation
 uses
   udmPrincipal, uSystemUtils;
 
+
 procedure TfmCadastroBase.btCancelarClick(Sender: TObject);
 begin
   qrDados.Cancel;
@@ -61,6 +64,7 @@ begin
   if ValidarObrigatorios then
   begin
     try
+      BeforePost;
       qrDados.Post;
       pcPrincipal.ActivePage := tsGrid;
     except
@@ -78,6 +82,7 @@ end;
 procedure TfmCadastroBase.btEditarClick(Sender: TObject);
 begin
   pcPrincipal.ActivePage := tsEdits;
+  BeforeEdit;
   qrDados.Edit;
 end;
 

@@ -15,7 +15,8 @@ uses
   ufrConsultaProdutos in 'ufrConsultaProdutos.pas' {frConsultaProduto: TFrame},
   uConsultaProdutos in 'uConsultaProdutos.pas' {fmConsultaProdutos},
   uRelatorioProduto in 'uRelatorioProduto.pas' {fmRelatorioProduto},
-  uRelatorioMovimentoEstoque in 'uRelatorioMovimentoEstoque.pas' {fmRelatorioMovimentoEstoque};
+  uRelatorioMovimentoEstoque in 'uRelatorioMovimentoEstoque.pas' {fmRelatorioMovimentoEstoque},
+  uCadastroUsuarios in 'uCadastroUsuarios.pas' {fmCadastroUsuarios};
 
 {$R *.res}
 
