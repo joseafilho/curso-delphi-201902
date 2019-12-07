@@ -2,11 +2,17 @@ unit uSystemUtils;
 
 interface
 
+uses
+  System.NetEncoding;
+
+const
+  KEY_MASTER = 108;
+
 function IsNumber(Key: Char): boolean;
 function MsgConfirm(aMessage: string): boolean;
 procedure MsgWarning(aMessage: string);
-function Criptografa(texto: string; chave: integer): string;
-function DesCriptografa(texto: string; chave: integer): string;
+function CriptB64(aStr: string): string;
+function DecriptB64(aStr: string): string;
 
 implementation
 
@@ -28,50 +34,14 @@ begin
   Application.MessageBox(PWideChar(aMessage), 'Pivo', MB_OK + MB_ICONWARNING);
 end;
 
-function AsciiToInt(Caracter: Char): Integer;
-var
-  i: Integer;
+function CriptB64(aStr: string): string;
 begin
-  i := 32;
-  while i < 255 do begin
-    if Chr(i) = Caracter then
-      Break;
-    i := i + 1;
-  end;
-  Result := i;
+  Result := TNetEncoding.Base64.Encode(AStr);
 end;
 
-Function Criptografa(texto:string;chave:integer):String;
-var
-  cont:integer;
-  retorno:string;
+function DecriptB64(aStr: string): string;
 begin
-  if (trim(texto)=EmptyStr) or (chave=0) then begin
-    result:=texto;
-  end else begin
-    retorno:='';
-    for cont:=1 to length(texto) do begin
-      retorno:=retorno+chr(asciitoint(texto[cont])+chave);
-    end;
-    result:=retorno;
-  end;
+  Result := TNetEncoding.Base64.Decode(aStr);
 end;
-
-Function DesCriptografa(texto:string;chave:integer):String;
-var
-  cont:integer;
-  retorno:string;
-begin
-  if (trim(texto)=EmptyStr) or (chave=0) then begin
-    result:=texto;
-  end else begin
-    retorno:='';
-    for cont:=1 to length(texto) do begin
-      retorno:=retorno+chr(asciitoint(texto[cont])-chave);
-    end;
-    result:=retorno;
-  end;
-end;
-
 
 end.

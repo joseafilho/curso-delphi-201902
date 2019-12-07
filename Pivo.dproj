@@ -102,62 +102,51 @@
         </DelphiCompile>
         <DCCReference Include="uPrincipal.pas">
             <Form>fmPrincipal</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="udmPrincipal.pas">
             <Form>dmPrincipal</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="uCadastroBase.pas">
             <Form>fmCadastroBase</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uCadastroClientes.pas">
             <Form>fmCadastroClientes</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uSystemUtils.pas"/>
         <DCCReference Include="uCadastroCategorias.pas">
             <Form>fmCadastroCategorias</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uCadastroFornecedores.pas">
             <Form>fmCadastroFornecedores</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uCadastroProdutos.pas">
             <Form>fmCadastroProdutos</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uCadastroProdutosFornecedores.pas">
             <Form>fmCadastroProdutosFornecedores</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uMovimentoEstoqueEntrada.pas">
             <Form>fmMovimentoEstoqueEntrada</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ufrConsultaProdutos.pas">
             <Form>frConsultaProduto</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="uConsultaProdutos.pas">
             <Form>fmConsultaProdutos</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uRelatorioProduto.pas">
             <Form>fmRelatorioProduto</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uRelatorioMovimentoEstoque.pas">
             <Form>fmRelatorioMovimentoEstoque</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uCadastroUsuarios.pas">
             <Form>fmCadastroUsuarios</Form>
-            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uLogin.pas">
+            <Form>fmLogin</Form>
         </DCCReference>
         <None Include="GeneratorFirebird.txt"/>
         <BuildConfiguration Include="Release">

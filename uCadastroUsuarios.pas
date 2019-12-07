@@ -39,21 +39,18 @@ implementation
 uses
   uCadastroCategorias, uSystemUtils;
 
-const
-  KEY_MASTER = 180;
-
 procedure TfmCadastroUsuarios.BeforeEdit;
 begin
   inherited;
   edLogin.Text := qrDados.FieldByName('LOGIN').AsString;
-  edSenha.Text := DesCriptografa(qrDados.FieldByName('SENHA').AsString, KEY_MASTER);
+  edSenha.Text := DecriptB64(qrDados.FieldByName('SENHA').AsString);
 end;
 
 procedure TfmCadastroUsuarios.BeforePost;
 begin
   inherited;
   qrDados.FieldByName('LOGIN').AsString := edLogin.Text;
-  qrDados.FieldByName('SENHA').AsString := Criptografa(edSenha.Text, KEY_MASTER);
+  qrDados.FieldByName('SENHA').AsString := CriptB64(edLogin.Text + '_' + edSenha.Text);
 end;
 
 procedure TfmCadastroUsuarios.FormClose(Sender: TObject;

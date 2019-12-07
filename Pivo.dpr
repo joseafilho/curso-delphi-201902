@@ -2,6 +2,7 @@ program Pivo;
 
 uses
   Vcl.Forms,
+  Vcl.Controls,
   uPrincipal in 'uPrincipal.pas' {fmPrincipal},
   udmPrincipal in 'udmPrincipal.pas' {dmPrincipal: TDataModule},
   uCadastroBase in 'uCadastroBase.pas' {fmCadastroBase},
@@ -16,7 +17,8 @@ uses
   uConsultaProdutos in 'uConsultaProdutos.pas' {fmConsultaProdutos},
   uRelatorioProduto in 'uRelatorioProduto.pas' {fmRelatorioProduto},
   uRelatorioMovimentoEstoque in 'uRelatorioMovimentoEstoque.pas' {fmRelatorioMovimentoEstoque},
-  uCadastroUsuarios in 'uCadastroUsuarios.pas' {fmCadastroUsuarios};
+  uCadastroUsuarios in 'uCadastroUsuarios.pas' {fmCadastroUsuarios},
+  uLogin in 'uLogin.pas' {fmLogin};
 
 {$R *.res}
 
@@ -25,5 +27,10 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfmPrincipal, fmPrincipal);
   Application.CreateForm(TdmPrincipal, dmPrincipal);
-  Application.Run;
+  Application.CreateForm(TfmLogin, fmLogin);
+
+  if fmLogin.ShowModal = mrOk then
+    Application.Run
+  else
+    Application.Terminate;
 end.
